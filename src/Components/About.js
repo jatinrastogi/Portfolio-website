@@ -11,7 +11,7 @@ const About = () => {
             opacity:1,
             transition: {
                 delay:0.5,
-                staggerChildren:0.6,
+                staggerChildren:0.2,
             },
         },
     }
@@ -38,7 +38,7 @@ const About = () => {
             
         
             <div className="about-1">
-                <motion.div className="button-1" initial = {{y:-1000}} animate={{y:0}} transition={{delay:2,stiffness:120,type:"spring"}}>
+                <motion.div className="button-1" initial = {{y:-1000}} animate={{y:0}} transition={{delay:1,stiffness:120,type:"spring"}}>
             <Link to="/">
                     <motion.button whileHover={{
                         scale:1.2,
@@ -58,7 +58,7 @@ const About = () => {
             
             
                 <motion.img src="jatin.jpeg" variants={sentence} initial="hidden" animate="visible" />
-                <motion.div className="button-2" initial = {{y:-1000}} animate={{y:0}} transition={{delay:2,stiffness:120,type:"spring"}}>
+                <motion.div className="button-2" initial = {{y:-1000}} animate={{y:0}} transition={{delay:1,stiffness:120,type:"spring"}}>
                 <Link to="/education">
                 <motion.button whileHover={{
                     scale:1.2,

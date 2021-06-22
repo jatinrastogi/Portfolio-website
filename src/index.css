@@ -206,7 +206,10 @@ body{
   opacity: 1;
   
 }
-.education-button1{
+.school{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
 }
 
 .education-2{
@@ -216,7 +219,7 @@ body{
   margin-top:50px;
   justify-content: center;
   align-items: center;
-  margin-left: 265px
+  margin-left: 200px;
 }
 
 .education-2 img{
