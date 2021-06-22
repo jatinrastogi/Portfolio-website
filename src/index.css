@@ -43,21 +43,7 @@ body{
 } */
 
 
-/* header */
-header{
-  display: flex;
-  padding: 40px;
-  align-items: center;
-}
-header .title{
-  flex-grow: 1;
-  margin-left: 20px;
-  font-size: 0.6em;
-}
-header h1{
-  border-bottom: 1px solid rgba(255,255,255,0.2);
-  padding-bottom: 10px;
-}
+
 
 /* lists */
 
@@ -124,30 +110,91 @@ header h1{
   height: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;  
-  flex-direction: row;
+  align-items: center;
+  flex-direction: column;
+
+  align-content: flex-start;
+}
+.about header{
+  font-size: 5rem;
+  margin-bottom: 30px;
+  color: black;
+  font-family: 'Quicksand';
+
+
+  
 }
 .about-1{
+  display: flex;
+  flex-direction: row;
+}
+.about-1 p{
   border: 3px solid white;
   padding: 10px;
+  color: black;
   width: 45%;
+  order:3;
+  margin-left: 50px;
+  margin-right: 40px;
+}
+.about-1 img{
   order:2;
-  margin-bottom: 150px;
-}
-.about-2{
-  order:1;
-  margin-right: 60px;
-  margin-bottom: 145px;
-
-}
-.about-2 img{
+  
+  margin-left: 40px;
   border: 4px solid white;
   width: 250px;
   height: 250px;
+  border-radius: 100px;
+  
+
+}
+.about-1 button{
+  color: white;
   border-radius: 50px;
+  cursor: pointer;
+  opacity: 1;
+  margin-top: 80px
+}
+.button-1{
+  order:1
+}
+.button-2{
+  order: 4;
+}
+.about-2{
+  margin-bottom: 20vh;
+}
+.about-2 button{
+  color: black;
+  background-color:transparent;
+  border-radius: 50px;
+  font-weight: bold;
+  cursor: pointer;
+  border: 2px solid;
+  height: 50px;
+  width: 100px;
+  order: 0;
+}
+/* Education */
+.education{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start; 
+  align-items: center;
+  /* align-content: flex-end; */
+  flex-direction: column;
   
 }
+.education-1{
+  display: flex;
+  margin-top:100px;
+  flex-direction: row;
 
+}
+ .education-1 section{
+  margin-left: 30px;
+} 
 /*sidebars*/
 .navbar {
   background-color:linear-gradient(180deg, #d309e1 0%, rgb(156, 26, 255) 100%);
@@ -155,6 +202,7 @@ header h1{
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  width: 100px;
 }
 
 .menu-bars {
