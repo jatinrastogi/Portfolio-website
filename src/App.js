@@ -24,7 +24,7 @@ function App() {
         <Route path="/" exact component={Home}/>
         <Route path="/about" component={About}/>
         <Route path="/education" component={Education}/>
-        <Route path="/skills" component={Skill}/>
+        <Route path="/skill" component={Skill}/>
         <Route path="/experience" component={Experience}/>
         <Route path="/projects" component={Project}/>
         <Route path="/contact" component={Contact}/>
