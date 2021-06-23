@@ -198,6 +198,7 @@ body{
 }
  .education-1 section{
   margin-left: 30px;
+  color: black;
 } 
 .education-1 button{
   color: white;
@@ -211,7 +212,15 @@ body{
   justify-content: center;
   flex-direction: row;
 }
+.education h3{
+  color: black;
+  font-family: "Quicksand";
+}
 
+.education h1{
+  color:black;
+  font-family: "Quicksand";
+}
 .education-2{
   display: flex;
   width: 100%;
@@ -222,13 +231,14 @@ body{
   margin-left: 200px;
 }
 
-.education-2 img{
+.education img{
   width: 50px;
   height: 50px;
 
 }
 .education-2 section{
   margin-left: 30px;
+  color: black;
 }
 /*skills*/
 .skill{
@@ -255,6 +265,9 @@ body{
   flex-direction: column;
 
 }
+.skill h1{
+  color: black;
+}
 .skills-icons{
   display: flex;
   flex-direction: row;
@@ -273,7 +286,29 @@ body{
   margin-left: 50px;
   margin-right: 50px;
 }
-
+.skills-icons-3{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 50px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+.skill-button1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 165px;
+  /* margin-left: 50px; */
+}
+.skill-button2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 165px;
+  /* margin-right: 50px; */
+}
 .skill button{
   color: white;
   border-radius: 50px;
