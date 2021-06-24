@@ -1,5 +1,8 @@
 import React from 'react'
 import {motion} from 'framer-motion'
+import {Link} from 'react-router-dom'
+import * as bsIcons from 'react-icons/bs';
+
 const Experience = () => {
     const line = "EXPERIENCE"
     const sentence = {
@@ -34,6 +37,20 @@ const Experience = () => {
                 }
         
             </motion.header>
+            <div className="experience">
+            <motion.div className="button-1">
+            <Link to="/about">
+                    <motion.button whileHover={{
+                        scale:1.2,
+                        boxShadow: "0px 0px 8px rgb(255,255,255)",
+                        TextShadow: "0px 0px 8px rgb(255,255,255)",
+                        rotate:360,
+                    }}>
+                        <bsIcons.BsArrowLeft size={50} color="black"/>
+                    </motion.button>
+                </Link>
+                </motion.div>
+            
             <div className="wrapper">
                 <div className="center-line">
 
@@ -57,14 +74,16 @@ const Experience = () => {
                     <section>
                         <img src="webarch.png" className="icon webarch"/>
                         <div className="details">
-                            <span className="title">
-                                WebArch Club
+                        <span className="title">
+                                WebArch 
                             </span>
+                        
                             <span> May 2021</span>
                         </div>
                         <span>
-                            R&D Member
+                            ML member 
                         </span>
+                        
 
                     </section>
                 </div>
@@ -78,12 +97,25 @@ const Experience = () => {
                             <span> Mar 2021</span>
                         </div>
                         <span>
-                            Data Science Intern
+                            DS Intern
                         </span>
 
                     </section>
                 </div>
             </div>
+            <div className="button-2">
+            <Link to="/about">
+                    <motion.button whileHover={{
+                        scale:1.2,
+                        boxShadow: "0px 0px 8px rgb(255,255,255)",
+                        TextShadow: "0px 0px 8px rgb(255,255,255)",
+                        rotate:360,
+                    }}>
+                        <bsIcons.BsArrowRight size={50} color="black"/>
+                    </motion.button>
+                </Link>
+            </div>
+        </div>
         </div>    
     )
 }
