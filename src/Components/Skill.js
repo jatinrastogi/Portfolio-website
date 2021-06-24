@@ -32,7 +32,7 @@ const Skill = () => {
     }
     return (
         <div className="skill">
-            <motion.h1 variants={sentence} initial="hidden" animate="visible">
+            <motion.header variants={sentence} initial="hidden" animate="visible">
                 {
                     line.split("").map((char,index) => {
                         return (
@@ -42,7 +42,7 @@ const Skill = () => {
                         )
                     })
                 }
-            </motion.h1>
+            </motion.header>
             <div className="skill-content">
             <motion.div className="skill-button1" initial = {{y:-1000}} animate={{y:0}} transition={{delay:1,stiffness:120,type:"spring"}}>
                 <Link to="/education">

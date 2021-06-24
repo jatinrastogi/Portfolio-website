@@ -24,10 +24,9 @@ body{
   width: 100vw;
   height: 100vh;
   background: linear-gradient(180deg, #d309e1 0%, rgb(156, 26, 255) 100%);
-  overflow: hidden;
   padding: 0;
   margin: 0;
-  
+  overflow-x: hidden;
 
 }
 /* button{
@@ -186,10 +185,16 @@ body{
   flex-direction: column;
   
 }
+.education header{
+  font-size: 4rem;
+  font-family: 'Quicksand';
+  color: black;
+
+}
 .education-1{
   display: flex;
   width: 100%;
-  margin-top:100px;
+  margin-top:50px;
   justify-content: center;
   align-items: center;
   flex-direction: row;
@@ -239,6 +244,7 @@ body{
 .education-2 section{
   margin-left: 30px;
   color: black;
+
 }
 /*skills*/
 .skill{
@@ -255,7 +261,7 @@ body{
   flex-direction: row;
   justify-content: flex-start;
   width: 100%;
-  margin-top: 50px;
+  margin-top: 10px;
   justify-content: space-between;
   height: 100%;
 }
@@ -267,6 +273,12 @@ body{
 }
 .skill h1{
   color: black;
+}
+.skill header{
+  font-size: 4rem;
+  font-family: 'Quicksand';
+  color: black;
+
 }
 .skills-icons{
   display: flex;
@@ -314,6 +326,90 @@ body{
   border-radius: 50px;
   cursor: pointer;
   opacity: 1;
+}
+/*experience*/
+.wrapper{
+  /* background: red; */
+  max-width: 1080px;
+  margin: 50px auto;
+  padding: 0 20px;
+  position: relative;
+}
+.wrapper .center-line{
+  height: 100%;
+  width: 4px;
+  background: white;
+  position: absolute;
+  left: 50%;
+  
+}
+.wrapper .row{
+  display: flex;
+}
+.wrapper .row-1{
+  justify-content: flex-start;
+
+}
+.wrapper .row-2{
+  justify-content: flex-end;
+}
+.wrapper .row-3{
+  justify-content: flex-start;
+}
+.wrapper .row section{
+  background-color: black;
+  border-radius: 5px;
+  width: calc(50% - 40px);
+  position: relative;
+  
+}
+.wrapper .row section::before{
+  background: black;
+  position: absolute;
+  content: "";
+  height: 15px;
+  width: 15px;
+  top: 28px;
+  z-index: -1;
+  transform: rotate(45deg);
+}
+.row-1 section::before{
+  right: -7px;
+}
+.row-2 section::before{
+  left: -7px;
+}
+.row-3 section::before{
+  right: -7px;
+}
+
+.row section .details{
+  justify-content: space-between;
+}
+.row section .icon{
+  position: absolute;
+  background:  white;
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: linear-gradient(180deg, #d309e1 0%, rgb(156, 26, 255) 100%);
+  top: 13px;
+  font-size: 17px;
+}
+.row-1 section .icon{
+  right: -60px;
+}
+.row-2 section .icon{
+  left: -60px;
+}
+.row-3 section .icon{
+  right: -60px;
+}
+.row section .details .title{
+  font-size: 22px;
+  font-weight: 600px;
 }
 /*sidebars*/
 .navbar {

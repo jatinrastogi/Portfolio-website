@@ -1,8 +1,6 @@
-import * as ioicons from 'react-icons/io'
-import {Link} from 'react-router-dom'
-import * as bsIcons from 'react-icons/bs';
+import React from 'react'
 import {motion} from 'framer-motion'
-const Education = () => {
+const Experience = () => {
     const line = "EXPERIENCE"
     const sentence = {
         hidden: {opacity:1},
@@ -24,7 +22,7 @@ const Education = () => {
     }
     return (
         <div className="education">
-            <motion.h1 variants={sentence} initial="hidden" animate="visible">
+            <motion.header variants={sentence} initial="hidden" animate="visible">
                 {
                     line.split("").map((char,index) => {
                         return (
@@ -34,68 +32,60 @@ const Education = () => {
                         )
                     })
                 }
-            </motion.h1>
-            <div className="education-1">
-                <motion.div className="education-button1" initial = {{y:-1000}} animate={{y:0}} transition={{delay:1,stiffness:120,type:"spring"}}>
-                <Link to="/skill">
-                    <motion.button whileHover={{
-                        scale:1.2,
-                        boxShadow: "0px 0px 8px rgb(255,255,255)",
-                        TextShadow: "0px 0px 8px rgb(255,255,255)",
-                        rotate:360,
-                    }}>
-                        <bsIcons.BsArrowLeft size={50} color="black"/>
-                    </motion.button>
-                </Link>
-                </motion.div>
-                <motion.div className="school" initial={{opacity:0}} animate={{opacity:1}} transition={{delay:0.5}} >
-                <img src="mowito.png"/>
-                <section>
-                    <h3>
-                    Mowito
-                    </h3>
-                    <p>
-                        (June 2021-Present)
-                    </p>
-                    <p>
-                        Robotic Intern
-                    </p>
-                    <hr/>
-                </section>
-                </motion.div>
-                <motion.div className="education-button2" initial = {{y:-1000}} animate={{y:0}} transition={{delay:1,stiffness:120,type:"spring"}}>
-                <Link to="/project">
-                    <motion.button whileHover={{
-                        scale:1.2,
-                        boxShadow: "0px 0px 8px rgb(255,255,255)",
-                        TextShadow: "0px 0px 8px rgb(255,255,255)",
-                        rotate:360,
-                    }}>
-                        <bsIcons.BsArrowRight size={50} color="black"/>
-                    </motion.button>
-                </Link>
-                </motion.div>
-                
-                
-    
+        
+            </motion.header>
+            <div className="wrapper">
+                <div className="center-line">
+
+                </div>
+                <div className="row row-1">
+                    <section>
+                        <img src="mowito.png" className="icon mowito"/>
+                        <div className="details">
+                            <span className="title">
+                                Mowito
+                            </span>
+                            <span> June 2021</span>
+                        </div>
+                        <span>
+                            Robotics Intern
+                        </span>
+
+                    </section>
+                </div>
+                <div className="row row-2">
+                    <section>
+                        <img src="webarch.png" className="icon webarch"/>
+                        <div className="details">
+                            <span className="title">
+                                WebArch Club
+                            </span>
+                            <span> May 2021</span>
+                        </div>
+                        <span>
+                            R&D Member
+                        </span>
+
+                    </section>
+                </div>
+                <div className="row row-3">
+                    <section>
+                        <img src="sparks.png"  className="icon sparks"/>
+                        <div className="details">
+                            <span className="title">
+                                Sparks Foundation
+                            </span>
+                            <span> Mar 2021</span>
+                        </div>
+                        <span>
+                            Data Science Intern
+                        </span>
+
+                    </section>
+                </div>
             </div>
-            <motion.div className="education-2" initial={{opacity:0}} animate={{opacity:1}} transition={{delay:0.5}}>
-                <img src="webarch.png" />
-                <section>
-                    <h3>
-                    WebArch Club
-                    </h3>
-                    <p>
-                        ( April 2021-Present)
-                    </p>
-                    <p>
-                        R&D Member
-                    </p>
-                    <hr/>
-                </section>
-            </motion.div>
-        </div>
+        </div>    
     )
 }
 
-export default Education
+export default Experience

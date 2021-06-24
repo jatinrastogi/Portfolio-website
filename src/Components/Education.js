@@ -24,7 +24,7 @@ const Education = () => {
     }
     return (
         <div className="education">
-            <motion.h1 variants={sentence} initial="hidden" animate="visible">
+            <motion.header variants={sentence} initial="hidden" animate="visible">
                 {
                     line.split("").map((char,index) => {
                         return (
@@ -34,7 +34,7 @@ const Education = () => {
                         )
                     })
                 }
-            </motion.h1>
+            </motion.header>
             <div className="education-1">
                 <motion.div className="education-button1" initial = {{y:-1000}} animate={{y:0}} transition={{delay:1,stiffness:120,type:"spring"}}>
                 <Link to="/about">

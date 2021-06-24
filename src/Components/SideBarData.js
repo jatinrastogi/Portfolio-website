@@ -27,7 +27,7 @@ export const SideBarData = [
     },
     {
         title: 'Skills',
-        path: '/skills',
+        path: '/skill',
         icon:<FaIcons.FaCogs/>,
         cName:'nav-text'
 
