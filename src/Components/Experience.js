@@ -38,8 +38,8 @@ const Experience = () => {
         
             </motion.header>
             <div className="experience">
-            <motion.div className="button-1">
-            <Link to="/about">
+            <motion.div className="button-1"  initial = {{y:-1000}} animate={{y:0}} transition={{delay:0.5,stiffness:120,type:"spring"}}>
+            <Link to="/skill">
                     <motion.button whileHover={{
                         scale:1.2,
                         boxShadow: "0px 0px 8px rgb(255,255,255)",
@@ -52,10 +52,10 @@ const Experience = () => {
                 </motion.div>
             
             <div className="wrapper">
-                <div className="center-line">
+                <motion.div className="center-line" initial={{opacity:0}} animate={{opacity:1}} transition={{delay:0.5}}>
 
-                </div>
-                <div className="row row-1">
+                </motion.div>
+                <motion.div className="row row-1" initial={{opacity:0}} animate={{opacity:1}} transition={{delay:0.8}}>
                     <section>
                         <img src="mowito.png" className="icon mowito"/>
                         <div className="details">
@@ -69,8 +69,8 @@ const Experience = () => {
                         </span>
 
                     </section>
-                </div>
-                <div className="row row-2">
+                </motion.div>
+                <motion.div className="row row-2" initial={{opacity:0}} animate={{opacity:1}} transition={{delay:1.1}} >
                     <section>
                         <img src="webarch.png" className="icon webarch"/>
                         <div className="details">
@@ -86,8 +86,8 @@ const Experience = () => {
                         
 
                     </section>
-                </div>
-                <div className="row row-3">
+                </motion.div>
+                <motion.div className="row row-3" initial={{opacity:0}} animate={{opacity:1}} transition={{delay:1.4}}>
                     <section>
                         <img src="sparks.png"  className="icon sparks"/>
                         <div className="details">
@@ -101,10 +101,10 @@ const Experience = () => {
                         </span>
 
                     </section>
-                </div>
+                </motion.div>
             </div>
-            <div className="button-2">
-            <Link to="/about">
+            <motion.div className="button-2"  initial = {{y:-1000}} animate={{y:0}} transition={{delay:0.5,stiffness:120,type:"spring"}}>
+            <Link to="/projects">
                     <motion.button whileHover={{
                         scale:1.2,
                         boxShadow: "0px 0px 8px rgb(255,255,255)",
@@ -114,7 +114,7 @@ const Experience = () => {
                         <bsIcons.BsArrowRight size={50} color="black"/>
                     </motion.button>
                 </Link>
-            </div>
+            </motion.div>
         </div>
         </div>    
     )
