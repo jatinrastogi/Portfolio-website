@@ -1,9 +1,14 @@
 import React from 'react'
 
-const Card = ({card_number}) => {
+const Card = ({img,line}) => {
     return (
-        <div style={styles.card}>
-            {card_number}
+        <div style={styles.card} className="card">
+            <section>
+            <img src={img}/>
+            <p>
+                {line}
+            </p>
+            </section>
         </div>
     )
 }
@@ -11,9 +16,9 @@ const Card = ({card_number}) => {
 const styles = {
     card : {
         width: "500px",
-        height: "300px",
-        backgroundColor: "blue",
-        border: "2px solid black",
+        height: "500px",
+        backgroundColor: "black",
+        border: "2px solid white",
         boxSizing: "border-box",
         fontSize: "2.5em",
         color: "white" 
