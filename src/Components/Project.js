@@ -26,7 +26,7 @@ class Project extends Component {
         super(props)
 
         this.state = {
-             current_card : 0
+             current_card : 1
         }
     }
 
@@ -49,13 +49,43 @@ class Project extends Component {
         this.setState({current_card:new_current_card}, () => {
             this.card_container.style.transitionDuration = "0.5s";
             this.card_container.style.transform = `translate(-${500*this.state.current_card}px)`
+
+            if(this.state.current_card === this.card_container.children.length-1){
+
+                setTimeout(() => {
+                this.card_container.style.transitionDuration = "0.0s";
+                this.card_container.style.transform = `translate(-${500}px)`
+                this.setState({current_card:1});
+            }, 502);
+        }
         });
     }
         else{
             return;
         }
     }
-
+    handle_previous = () => {
+        if(this.state.current_card > 0){
+            let new_current_card = this.state.current_card - 1;
+    
+            this.setState({current_card:new_current_card}, () => {
+                this.card_container.style.transitionDuration = "0.5s";
+                this.card_container.style.transform = `translate(-${500*this.state.current_card}px)`
+    
+                if(this.state.current_card === 0){
+    
+                    setTimeout(() => {
+                    this.card_container.style.transitionDuration = "0.0s";
+                    this.card_container.style.transform = `translate(-${500*(this.card_container.children.length-2)}px)`
+                    this.setState({current_card:this.card_container.children.length-2});
+                }, 502);
+            }
+            });
+        }
+            else{
+                return;
+            }
+    }
     render() {
         return (
             <div className="education" >
@@ -71,13 +101,13 @@ class Project extends Component {
                 }
                 </motion.header>
             <div className="project">
-
-            <div className="view-port" style={styles.view_port}>
             <div className="project-button-1">
                 <button onClick={this.handle_previous}>
                     <biIcons.BiLeftArrow size={30} color="black"/>
                 </button>
             </div>
+            <div className="view-port" style={styles.view_port}>
+        
                 <div ref={ref_id => this.card_container=ref_id} className="card-container" style={styles.card_container}>
                     <Card card_number="0"/>
                     <Card card_number="1"/>

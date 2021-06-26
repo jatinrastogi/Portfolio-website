@@ -460,8 +460,8 @@ body{
   flex-direction: column;
   justify-content: center;
   height: 300px;
-  /* margin-top: 50px; */
-  /* margin-right: 200px; */
+  margin-top: 50px;
+  /* margin-right: 25px; */
 }
 .project-button-2{
   display: flex;
