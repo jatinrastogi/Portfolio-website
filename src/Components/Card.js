@@ -1,6 +1,7 @@
 import React from 'react'
-
-const Card = ({img,title,line}) => {
+import * as FaIcons from 'react-icons/fa';
+import {Link} from "react-router-dom"
+const Card = ({img,link,title,line}) => {
     return (
         <div style={styles.card} className="card">
             
@@ -8,12 +9,21 @@ const Card = ({img,title,line}) => {
         <div className="image_overlay">
             <div className="image_title">
                 {title}
+            </div>
                 <p className="image_description">
                     {line}
                 </p>
+            
+            <div className="card-icon">
+            <Link to={link}>
+                <button>
+                    <FaIcons.FaGithub size={50} color="black"/>
+                </button>
+            </Link>
+            </div>
             </div>
         </div>
-        </div>
+        
     )
 }
 
