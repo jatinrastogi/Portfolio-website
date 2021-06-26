@@ -109,11 +109,11 @@ class Project extends Component {
             <div className="view-port" style={styles.view_port}>
         
                 <div ref={ref_id => this.card_container=ref_id} className="card-container" style={styles.card_container}>
-                    <Card img="onlinebooks.png" line="This is a online book store where you can download books as well as read it online."/>
-                    <Card img="lidarvisualizer.png" line="It as an tool to stimulate lidar in different surroundings and to know about how it shows rays in it. "/>
-                    <Card img="rrtalgo.png" line="A simple visualization of Rapidly random tree algorithm which is used by many robots to navigate the path."/>
-                    <Card img="knn.webp" line="A representation of K-nearest neighbour algorithm using different data."/>
-                    <Card img="imageclassification.png" line="Model of Binary classification between cats and dogs."/>
+                    <Card img="onlinebooks.png"  title="Prime Books"line="This is a online book store where you can download books as well as read it online."/>
+                    <Card img="lidarvisualizer.png" title="Lidar Visualizer" line="It as an tool to stimulate lidar in different surroundings and to know about how it shows rays in it. "/>
+                    <Card img="rrtalgo.png" title="RRT Path Finder" line="A simple visualization of Rapidly random tree algorithm which is used by many robots to navigate the path."/>
+                    <Card img="knn.webp"  title="K-Nearest Neighbour" line="A representation of K-nearest neighbour algorithm using different data."/>
+                    <Card img="imageclassification.png"  title="Image Classification" line="Model of Binary classification between cats and dogs."/>
             
 
                 </div>

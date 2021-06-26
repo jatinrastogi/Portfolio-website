@@ -481,16 +481,31 @@ body{
 
 /*card*/
 .card img{
+  display: block;
   width: 100%;
-  height:75%;
+  height:100%;
 }
 .card section{
   height: 100%;
 }
 .card section p{
-  font-size: medium;
-  font-weight: bold;
+  overflow-wrap:break-word;
+  font-size: large;
+  font-weight: bolder;
   font-family: 'Quicksand';
+}
+.image_overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  color: #ffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 /*sidebars*/
