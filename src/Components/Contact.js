@@ -31,8 +31,24 @@ const Contact = () => {
                             </motion.span>
                         )
                     })
-                }
+            }
+
             </motion.header>
+        <div className="contact-wrapper">
+            <div className="contact-form">
+                <div className="input-fields">
+                    <input type="text" className="input" placeholder="Name"/>
+                    <input type="text" className="input" placeholder="Email Address"/>
+                    <input type="text" className="input" placeholder="Subject"/>
+                    {/* <input type="text" className="input" placeholder="Message"/> */}
+
+                </div>
+                <div className="msg">
+                    <textarea placeholder="Message..."></textarea>
+                    <div className="btn">Send</div>
+                </div>
+            </div>
+        </div>
         </div>
     )
 }

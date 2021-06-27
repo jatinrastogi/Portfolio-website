@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import {motion} from 'framer-motion'
 import Card from "./Card"
 import * as biIcons from "react-icons/bi"
-import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom';
 import * as bsIcons from 'react-icons/bs';
 
 const line = "PROJECTS"
