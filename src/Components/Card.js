@@ -15,11 +15,11 @@ const Card = ({img,link,title,line}) => {
                 </p>
             
             <div className="card-icon">
-            <Link to={link}>
+            <a href={link} target="_blank">
                 <button>
                     <FaIcons.FaGithub size={50} color="black"/>
                 </button>
-            </Link>
+            </a>
             </div>
             </div>
         </div>
