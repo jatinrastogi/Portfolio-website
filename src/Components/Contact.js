@@ -1,4 +1,4 @@
-import React from 'react'
+import {useState} from 'react'
 import {motion} from 'framer-motion'
 const Contact = () => {
     const line = "Contact Me";
@@ -20,6 +20,33 @@ const Contact = () => {
         },
     
     }
+
+
+        const [status,setStatus] = useState("submit")
+        const handleSubmit = async (e) => {
+            console.log("r");
+            e.preventdefault();
+            setStatus("Sending...");
+            const { name,email,subject,message } = e.target.elements;
+            let details = {
+                name: name.value,
+                email : email.value,
+                subject : subject.value,
+                message : message.value
+            };
+            let response = await fetch("http://localhost:5000/contact",{
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json;charset=utf-8",
+                },
+                body: JSON.stringify(details),
+            });
+            setStatus("submit")
+            let result = await response.json();
+            alert(result.status);
+           
+        };
+    
     return (
         <div className="education">
             <motion.header variants={sentence} initial="hidden" animate="visible">
@@ -35,19 +62,27 @@ const Contact = () => {
 
             </motion.header>
         <div className="contact-wrapper">
+        <form onSubmit={handleSubmit}>
             <div className="contact-form">
                 <div className="input-fields">
-                    <input type="text" className="input" placeholder="Name"/>
-                    <input type="text" className="input" placeholder="Email Address"/>
-                    <input type="text" className="input" placeholder="Subject"/>
+                    <label htmlFor="name"></label>
+                    <input type="text" className="input" id="name" placeholder="Name" required/>
+                    <label htmlFor="email"></label>
+                    <input type="text" className="input" id="email" placeholder="Email Address" required/>
+                    <label htmlFor="subject"></label>
+                    <input type="text" className="input" id="subject" placeholder="Subject" required/>
                     {/* <input type="text" className="input" placeholder="Message"/> */}
 
                 </div>
                 <div className="msg">
-                    <textarea placeholder="Message..."></textarea>
-                    <div className="btn">Send</div>
-                </div>
+                    <label htmlFor="message"></label>
+                    <textarea placeholder="Message..." id="message" required></textarea>
+                    <button className="btn" type="submit">
+                        {status}
+                    </button>
             </div>
+            </div>
+            </form>
         </div>
         </div>
     )
